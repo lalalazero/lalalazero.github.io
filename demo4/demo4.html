@@ -17,14 +17,6 @@
             background-color: red;
         }
 
-        .float-left {
-            clear: both;
-        }
-
-        .float-right {
-            clear: both;
-        }
-
 
         .fr-right {
             width: 100px;
@@ -38,9 +30,7 @@
             background-color: pink;
             margin-right: 102px;
         }
-        .three {
-            clear: both;
-        }
+
         .th-left {
             width: 100px;
             background-color: blue;
@@ -62,20 +52,41 @@
             height:200px;
         }
 
+        .left-nav {
+            border: 1px solid #fdebcb;
+        }
+
         .left-nav>ul>li {
             list-style: none;
             float: left;
             margin-left:10px;
         }
+
+        /*
+          用多余的.left-nav-clear元素来清除浮动
+         */
+        .left-nav .left-nav-clear {
+            float: none;
+            clear: left;
+        }
         .right-nav {
             float:right;
-            clear: both;
+            border: 1px solid #ccc;
         }
 
         .right-nav>ul>li {
             float:left;
             list-style: none;
             margin-left: 10px;
+        }
+
+        /*
+        用伪元素来清除浮动
+         */
+        .right-nav::after {
+            content: '';
+            display: block;
+            clear: both;
         }
     </style>
 </head>
@@ -107,6 +118,7 @@
                 <li>2.电影</li>
                 <li>3.漫画</li>
                 <li>4.新闻</li>
+                <li class="left-nav-clear"></li>
             </ul>
         </div>
         <div class="right-nav">
