@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>浩然弟弟最棒</title>
 
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
     <style>
 
@@ -32,6 +33,8 @@
         .iconfont-font1:before {
             content: "\e648";
         }
+
+
 
         /*通用样式*/
 
@@ -334,7 +337,200 @@
 
 
         /*第五屏,合作伙伴*/
+        .friends {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .friends img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 7px solid white;
+        }
+        .friends figcaption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .friends li {
+            margin: 0 auto;
+        }
+        .friends ol {
+            display: flex;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        .friends ol a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #222;
+            line-height: 40px;
+        }
+        .friends ol a:hover {
+            background-color: #fed136;
+        }
+        .friends ol i {
+            font-size: 20px;
+            color: white;
+        }
+
+        .friends-description {
+            padding-top: 50px;
+            padding-left: 10%;
+            padding-right: 10%;
+            line-height: 1.8;
+            font-size: 14px;
+            color: #776868;
+        }
+
+
+
+
+
+
         /*第六屏,页脚*/
+
+        .banner ul {
+            text-align: center;
+        }
+
+        .banner li {
+            display: inline-block;
+            padding: 60px 10px;
+        }
+
+        .contact {
+            background-image: url(pic/map-image.png);
+            background-color: #222;
+            /*height: 800px;*/
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-top: 10%;
+        }
+
+        .contact .row>h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .contact .row p {
+            color: #ccc;
+            margin-bottom: 60px;
+        }
+        .contact .row form {
+            display: flex;
+
+        }
+
+        .contact .form-col {
+            width: 50%;
+            padding-left: 3%;
+            height: 250px;
+        }
+        .contact .form-control {
+            height: calc(100% / 3);
+        }
+        .contact .form-col input{
+            display: block;
+            width: 100%;
+            height: calc(100% - 20px);
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding-left: 30px;
+            color: #777979;
+            font-size: 14px;
+        }
+        .contact .form-col textarea {
+            width: 100%;
+            height: calc(100% - 20px);
+            border: none;
+            border-radius: 4px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: -20px;
+            color: #777979;
+            font-size: 14px;
+        }
+        .contact .submit {
+            padding-top: 10px;
+        }
+        .contact .submit>input {
+            display: inline-block;
+            width: 200px;
+            border: none;
+            height: 50px;
+            font-size: 18px;
+            color: white;
+            background: #fed136;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact .submit>input:hover {
+            opacity: 0.8;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-left: 10%;
+            padding-right: 10%;
+            display: flex;
+            align-items: center;
+        }
+        .copy,
+        .copy-icon,
+        .policy {
+            width: calc(100% / 3);
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .copyright .copy-icon a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #222;
+            line-height: 40px;
+            margin-right: 15px;
+        }
+
+        .copyright .copy-icon a:hover {
+            background: #fed136;
+        }
+
+
+        .copyright .copy-icon i {
+            font-size: 18px;
+            color: white;
+        }
+
+        .policy a {
+            color: #fed136;
+            margin-right: 10px;
+        }
+        .policy a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
 
 
 
@@ -522,57 +718,120 @@
                 </li>
             </ul>
         </section>
-        <section class="friends section-layout">
-            <h2>合作好友</h2>
-            <p>是合作好友，也是飙戏对手</p>
-            <ul>
+        <section class="section-layout">
+            <h2>好友</h2>
+            <p>是合作伙伴，也是飙戏对手</p>
+            <ul class="friends" >
                 <li>
-                    <figure><img src="" alt="">
-                        <figcaption></figcaption>
-                        <span></span>
+                    <figure><img src="pic/oynn.jpg" alt="">
+                        <figcaption>欧阳娜娜</figcaption>
                     </figure>
                     <ol>
-                        <li>icon1</li>
-                        <li>icon2</li>
-                        <li>icon3</li>
+                        <li>
+                            <a href=""><i class="fa fa-weibo"></i></a>
+                        </li>
+                        <li >
+                            <a href=""><i class="fa fa-weixin"></i></a>
+                        </li>
+                        <li >
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                        </li>
                     </ol>
-                    <div></div>
                 </li>
                 <li>
-                    <figure><img src="" alt="">
-                        <figcaption></figcaption>
-                        <span></span>
+                    <figure><img src="pic/wbq.jpg" alt="">
+                        <figcaption>王宝强</figcaption>
                     </figure>
                     <ol>
-                        <li>icon1</li>
-                        <li>icon2</li>
-                        <li>icon3</li>
+                        <li>
+                            <a href=""><i class="fa fa-weibo"></i></a>
+                        </li>
+                        <li >
+                            <a href=""><i class="fa fa-weixin"></i></a>
+                        </li>
+                        <li >
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                        </li>
+
                     </ol>
-                    <div></div>
                 </li>
                 <li>
-                    <figure><img src="" alt="">
-                        <figcaption></figcaption>
-                        <span></span>
+                    <figure><img src="pic/tsy.jpeg" alt="">
+                        <figcaption>谭松韵</figcaption>
                     </figure>
                     <ol>
-                        <li>icon1</li>
-                        <li>icon2</li>
-                        <li>icon3</li>
+                        <li>
+                            <a href=""><i class="fa fa-weibo"></i></a>
+                        </li>
+                        <li >
+                            <a href=""><i class="fa fa-weixin"></i></a>
+                        </li>
+                        <li >
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                        </li>
                     </ol>
-                    <div></div>
                 </li>
             </ul>
+            <div class="friends-description">
+                <p>从《北京爱情故事》和欧阳娜娜合作，到《唐人街探案》和王宝强上演侦探历险，再到网剧
+                    《最好的我们》遇见谭松韵饰演的耿耿，一路走来，刘昊然始终每一步都稳扎稳打，未来可期。</p>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="banner"></div>
-        <div class="contact"></div>
+        <div class="banner">
+            <ul>
+                <li>
+                    <a href=""><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/designmodo.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/themeforest.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/creative-market.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="contact section-layout">
+            <div class="row">
+                <h2>联系作者</h2>
+                <p>需要修改关于浩然弟弟的描述，或者对页面有新的建议和想法请联系作者</p>
+            </div>
+            <div class="row">
+                <form>
+                    <div class="form-col">
+                        <div class="form-control">
+                        <input name="username" type="text" placeholder="你的名字...">
+                        </div>
+                        <div class="form-control">
+                            <input name="email" type="text" placeholder="联系邮箱...">
+                        </div>
+                        <div class="form-control">
+                            <input name="phone" type="text" placeholder="你的手机...">
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <textarea class="form-control" name="message" cols="30" rows="10">留下你的建议...</textarea>
+                    </div>
+                    <!--<button value="点击发送"></button>-->
+                </form>
+                <div class="submit">
+                    <input type="submit" value="点击发送">
+                </div>
+            </div>
+        </div>
         <div class="copyright">
-            <span>copyright Ling Website</span>
-            <a href="">twitter</a>
-            <a href="">facebook</a>
-            <a href="">linkedin</a>
+            <div class="copy">
+                <span>Copyright © Ling Website 2018</span>
+            </div>
+            <div class="copy-icon">
+                <a href=""><i class="fa fa-weibo"></i></a>
+                <a href=""><i class="fa fa-weixin"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+            </div>
             <div class="policy">
                 <a href="">Privacy Policy</a>
                 <a href="">Terms of Use</a>
