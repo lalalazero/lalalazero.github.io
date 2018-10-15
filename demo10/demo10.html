@@ -527,6 +527,52 @@
         }
 
 
+        .fade {
+            display: none;
+        }
+
+
+
+        /*
+        响应式
+        屏幕宽度小于985px时触发
+        */
+        @media screen and (max-width: 985px) {
+            /*
+            第一屏
+            1. 修改背景图片的大小、位置
+            2. 修改菜单样式，改成弹出框
+            */
+            .fade {
+                display: unset;
+            }
+            header {
+                background-position: center;
+                background-size: auto;
+            }
+            /*隐藏原有导航菜单*/
+            .navbar .menu {
+                display: none;
+            }
+            .navbar .menu-btn {
+                float: right;
+                position: relative;
+                font-size: 2em;
+            }
+            .menu-btn>a {
+                color: #12443f;
+            }
+            .child a{
+                color: white;
+            }
+
+            .menu-btn>a:hover .child a{
+                color: yellow;
+            }
+
+        }
+
+
 
 
 
@@ -541,6 +587,16 @@
     <header>
         <nav class="navbar clearfix">
             <h1 class="logo">刘昊然——少年应如是</h1>
+            <div class="menu-btn fade">
+                <a href=""><i class="fa fa-bars"></i></a>
+                <ul class="child">
+                    <li><a id="test" href="">简介</a></li>
+                    <li><a href="">作品</a></li>
+                    <li><a href="">履历</a></li>
+                    <li><a href="">微博</a></li>
+                    <li><a href="">作者</a></li>
+                </ul>
+            </div>
             <ul class="menu">
                 <li><a href="">简介</a></li>
                 <li><a href="">作品</a></li>
