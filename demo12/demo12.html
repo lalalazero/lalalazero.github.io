@@ -209,11 +209,12 @@
                 e.stopPropagation();
             }
         }
+        var timer2;
         var sidebarHander2 = function (e) {
-            if(timer) {
-                clearTimeout(timer);
+            if(timer2) {
+                clearTimeout(timer2);
             }
-            timer = setTimeout(function() {
+            timer2 = setTimeout(function() {
                 console.log('延迟执行...');
                 sidebarHandler(e);
             }, 500);
