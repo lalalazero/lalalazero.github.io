@@ -83,14 +83,14 @@ body {
 .setting {
     visibility: hidden;
     position: absolute;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     top: 24px;
     right:0;
     /* background-color: red; */
     /* padding-right: 70px; */
     /* padding-top: 10px; */
-    margin-right: 74px;
-    margin-top: 5px;
+    /*margin-right: 74px;*/
+    /*margin-top: 5px;*/
 
 
 }
@@ -108,8 +108,8 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 30px;
-    margin-top: -4px;
+    margin-right: 12px;
+    margin-top: 6px;
     /* 没有settingAngle2就用阴影做边框 */
     /* box-shadow: -1px -1px 0px #ccc; */
 
@@ -128,8 +128,8 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 29px;
-    margin-top: -5px;
+    margin-right: 11px;
+    margin-top: 5px;
     /* box-shadow: -1px -1px 0px #ccc; */
 
 }
@@ -140,11 +140,11 @@ body {
     background-color: white;
     border: 1px solid #ccc;
     font-size: 12px;
-    width: 68px;
+    width: 80px;
     float: right;
-    /* margin-right: 70px; */
+     margin-right: -24px;
     text-align: center;
-    /* margin-top: 10px; */
+     margin-top: 10px;
     box-shadow: 1px 1px 2px 2px #ebebeb, -1px -1px 0px 0px #d1d1d1;
 }
 .setting .settingList:hover {
@@ -254,9 +254,12 @@ body {
 .wrapper {
     /* border: 1px solid green; */
     margin: 0 auto;
-    padding-top: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     /* border: 1px solid red; */
     color: #b8b8b8;
+    height: 65%;
+    min-height: 400px;
 }
 
 .logo {
@@ -397,6 +400,94 @@ body {
     text-decoration: underline;
 
 }
+.suggestion .feedback>span:hover {
+    cursor: pointer;
+}
+
+.footer {
+    /*outline: 1px solid red;*/
+    text-align: center;
+    font-size: 13px;
+    color: #b8b8b8;
+    padding: 30px 0;
+}
+.footer .qrcode>span{
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.footer .qrcode span:last-child{
+    /*padding: 5px 0;*/
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+.footer .about {
+    /*border: 1px solid blue;*/
+    margin-top: 10px;
+    margin-bottom: 8px;
+
+}
+.footer .about>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-left: 30%;*/
+    /*margin-right: 30%;*/
+    /*border: 1px solid red;*/
+
+}
+.footer .about>ul>li {
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0 10px;
+}
+
+.footer .copyright {
+    display: flex;
+    justify-content: center;
+}
+.footer .copyright>ul {
+    display: flex;
+}
+.footer .copyright>ul>li {
+    padding: 0 5px;
+}
+
+.footer .copyright>ul+span {
+    margin-left: 20px;
+}
+.footer .copyright>ul>li:last-child {
+    padding: 0;
+}
+
+.footer .copyright>ul>li .icon1{
+    background-image: url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_5859e57.png");
+    background-position: -598px -96px;
+    width: 20px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    display: block;
+    padding: 0;
+}
+
+.footer .copyright .icon2 {
+    background-image: url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_5859e57.png");
+    background-position: -623px -96px;
+    width: 20px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    display: block;
+    margin-left: 3px;
+}
+
 
 
 
