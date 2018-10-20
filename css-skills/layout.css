@@ -1,0 +1,14 @@
+ul,ol {
+    list-style: none;
+}
+
+.layout {
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.back-btn {
+    display: block;
+    margin: 20px 0;
+}
