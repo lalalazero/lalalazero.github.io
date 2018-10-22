@@ -127,7 +127,6 @@
         var xhr = new XMLHttpRequest();
         // 跨域emmmm
         // xhr.open('GET','http://www.recipepuppy.com/api/?i=garlic&q=noddles&p=1');
-        xhr.open('GET', 'https://www.easy-mock.com/mock/5bcde2026c5cf5220c328e19/myspace/list');
         xhr.onreadystatechange = function (ev) {
             console.log('readystatechagne ' + xhr.readyState);
             switch (xhr.readyState){
@@ -146,6 +145,8 @@
             }
 
         }
+        // open 写在 onreadystatechange 监听后面，否则错过 readystate = 1 的状态
+        xhr.open('GET', 'https://www.easy-mock.com/mock/5bcde2026c5cf5220c328e19/myspace/list');
         xhr.send();
         xhr.onload = function (ev) {
             if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
