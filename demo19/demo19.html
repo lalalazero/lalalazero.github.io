@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//at.alicdn.com/t/font_883176_1wkza4ymgp8.js"></script>
+    <title>登录注册对话框</title>
+    <style type="text/css">
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .layout {
+            background: linear-gradient(to right top, rgba(38,50,105,0.78), rgba(255,152,0,0.45)), url("http://book.jirengu.com/fe/code/projects/HungoouRadio/imgs/bg.jpg") center no-repeat;
+            background-size: cover;
+            height: 100vh;
+
+        }
+        /*.header {*/
+            /*border: 1px solid red;*/
+        /*}*/
+
+        .header .login {
+            float: right;
+            margin: 10px 20px;
+        }
+        .header .login .icon {
+            font-size: 25px;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+        }
+        .modal .modal-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 5px;
+
+
+        }
+        .modal .modal-tabs {
+            padding-top: 20px;
+            text-align: center;
+            width: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            /*border: 1px solid red;*/
+            padding-bottom: 5px;
+        }
+
+        .tab-active {
+            border-bottom: 3px solid #666;
+        }
+
+
+        .modal-content {
+            padding: 30px 50px;
+        }
+        .modal-content .formRow {
+            position: relative;
+            margin: 15px 0;
+
+        }
+        .modal-content .formRow>input{
+            width: 290px;
+            line-height: 25px;
+            padding: 5px 0;
+            padding-left: 30px;
+            border: none;
+            border: 1px solid #b8b8b8;
+            border-radius: 2px;
+        }
+        .modal-content .formRow>svg {
+            height: 37px;
+            padding-left: 10px;
+        }
+        .formRow>input:focus {
+            outline: none;
+        }
+        .modal-content .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .modal-content input[type='submit'] {
+            width: 45px;
+            height: 30px;
+            padding: 0;
+            font-weight: 800;
+
+        }
+        /*.modal-register {*/
+            /*display: block;*/
+            /*transform: translate(-50%,-50%) rotateY(180deg);*/
+            /*backface-visibility: hidden;*/
+            /*transition: all 1s;*/
+        /*}*/
+        /*.modal-login {*/
+            /*display: block;*/
+            /*transform: translate(-50%,-50%) rotateY(180deg);*/
+            /*backface-visibility: hidden;*/
+            /*transition: all 1s;*/
+        /*}*/
+
+
+        .flip-modal.login .register, .flip-modal.register .login{
+            display: block;
+            transform: translate(-50%, -50%) rotateY(180deg);
+            backface-visibility: hidden;
+            transition: all 1s;
+            /*display: none;*/
+        }
+
+        .flip-modal.login .login, .flip-modal.register .register{
+            display: block;
+            transform: translate(-50%, -50%) rotateY(0deg);
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="header clearfix">
+            <div class="login">
+                <svg class="icon">
+                    <use xlink:href="#icon-icon"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="main">
+            <div class="flip-modal login">
+                <div id="modal-1" class="modal login">
+                    <a href="" class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#icon-close"></use>
+                        </svg>
+                    </a>
+                    <div class="modal-tabs">
+                        <span class="tab-active">登录</span>
+                        <span>注册</span>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#" method="post">
+                            <div class="formRow">
+                                <input type="text" placeholder="用户名">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-dengluzhanghao"></use>
+                                </svg>
+                            </div>
+                            <div class="formRow">
+                                <input type="password" placeholder="密码">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-dengluzhucemima"></use>
+                                </svg>
+                            </div>
+                            <div class="formRow">
+                                <input type="submit" value="登录">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div id="modal-2" class="modal register">
+                    <a href="" class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#icon-close"></use>
+                        </svg>
+                    </a>
+                    <div class="modal-tabs">
+                        <span >登录</span>
+                        <span class="tab-active">注册</span>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#" method="post">
+                            <div class="formRow">
+                                <input type="text" placeholder="输入用户名">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-dengluzhanghao"></use>
+                                </svg>
+                            </div>
+                            <div class="formRow">
+                                <input type="password" placeholder="输入密码">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-dengluzhucemima"></use>
+                                </svg>
+                            </div>
+                            <div class="formRow">
+                                <input type="password" placeholder="再次输入密码">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-dengluzhucemima"></use>
+                                </svg>
+                            </div>
+                            <div class="formRow">
+                                <input type="submit" value="注册">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function $(selector) {
+            return document.querySelector(selector);
+        }
+        function $$(selector) {
+            return document.querySelectorAll(selector);
+        }
+        var modal_1 = $('#modal-1');
+        var modal_2 = $('#modal-2');
+        var flipModal = $('.flip-modal');
+
+        $$('.modal-tabs').forEach(function (node) {
+            node.addEventListener('click',function (e) {
+                if(e.target.innerText === '登录') {
+                    flipModal.classList.remove('register');
+                    flipModal.classList.add('login');
+                }else {
+                    flipModal.classList.remove('login');
+                    flipModal.classList.add('register');
+                }
+            })
+        });
+
+    </script>
+</body>
+</html>
