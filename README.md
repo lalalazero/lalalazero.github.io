@@ -16,9 +16,15 @@
 - demo12 模仿百度首页
 - demo13 上传头像并预览
 - demo14 涟漪按钮
+- demo18 js实现简单的动画效果
+- demo19 登录注册翻转modal
 
 ## beanbean
-- 给豆豆写的页面
+- 给豆豆写的页面（todo）
 
 ## css-skills 技巧和套路总结
 - demo15 文本溢出（单行和多行）
+- demo16 文字两端对齐
+- demo17 1比1的div
+
+
